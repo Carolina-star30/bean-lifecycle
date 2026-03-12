@@ -1,8 +1,8 @@
 package com.example.alpha.common;
 
-public class CreekChef {
+public class CreekChef implements Chef {
 
-    public GreekCHef () {
+    public GreekChef () {
         System.out.println("In constructor " + getClass().getSimpleName());
     }
 
