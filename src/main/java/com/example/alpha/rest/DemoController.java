@@ -12,23 +12,17 @@ import util.Chef;
 public class DemoController {
 
     private Chef myChef;
-    private Chef secondChef;
 
 
-    @GetMapping("/check")
-    public String check () {
-        return "Comparing beans: myChef == secondChef is " + (myChef == secondChef);
-    }
 
     @Autowired
     public DemoController(
-            @Qualifier("frenchChef") Chef theChef,
-            @Qualifier("frenchChef") Chef theSecondChef)
+            @Qualifier("mexicanChef") Chef theChef)
     {
         System.out.printf("In constructir: " + getClass().getSimpleName());
         myChef = theChef;
-        secondChef = theSecondChef;
     }
+
 
     // setter injection
 //    @Autowired
